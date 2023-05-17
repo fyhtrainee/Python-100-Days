@@ -5,6 +5,8 @@
 #     print('身份验证成功')
 # else:
 #     print('身份验证失败')
+# import inspect
+import sys
 
 
 # value = float(input('请输入长度：'))
@@ -38,7 +40,6 @@
 # print(sum)
 
 
-
 # import random
 #
 # answer = random.randint(1, 100)
@@ -63,8 +64,6 @@
 #     for j in range(1, i + 1):
 #         print('%d * %d = %d' % (i, j, i * j), end='\t')
 #     print()
-
-
 
 
 # 数学基础： 值得注意的是，end的来源是:
@@ -146,7 +145,403 @@
 #     x = y
 #     y = t
 #     print(x)
+# 完美数
+# import math
+# for i in range(1, 10000):
+#     end = int(math.sqrt(i))
+#     num = 0
+#     for j in range(1, end + 1):
+#         if i % j == 0:
+#             num = j + num + i // j
+#     if num - i == i:
+#         print(i)
+
+# 阶乘
+# def fac(num):
+#     res = 1
+#     for i in range(1, num + 1):
+#         res *= i
+#     return res
+#
+#
+# result = int(fac(7) / (fac(3) * fac(4)))
+#
+# print(result)
+
+# import random
+#
+#
+# def roll(n=2):
+#     total = 0
+#     for _ in range(n):
+#         total += random.randint(1, 6)
+#     return total
+#
+#
+# def add(a=0, b=0, c=0):
+#     return a + b + c
+#
+#
+# def fac2(a=0, b=0, c=0):
+#     return a * b + c
+#
+#
+# print(roll())
+# print(roll(4))
+#
+# print(add())
+# print(add(1))
+# print(add(1, 2))
+# print(add(1, 2, 3))
+#
+# print(add(c=50, a=100, b=20))
+#
+# print(fac2(a=1, c=6, b=1))
+#
+#
+# def add(*a):
+#     total = 0
+#     for val in a:
+#         total += val
+#     return total
+#
+#
+# print(add(1, 2, 3, 4, 5, 6))
+#
+# print(add(23, 3, 4, 5, 56, 6, 7))
+
+# import model1
+# import model2
+# import model3
+#
+# if __name__ == '__main__':
+#     print('call foo()')
+#     model2.foo()
+#
+#
+# model1.foo()
+# model2.foo()
+# model3.foo()
+#
+# if __name__ == '__main__':
+#     print('call foo()')
+#     model1.foo()
+
+# def gcd(x , y):
+#
+#     (x , y) = (y , x) if x > y else (x ,y)
+#     print(x)
+#     print(y)
+#     for fac in range(x ,0 ,-1):
+#         if x % fac == 0 and y % fac == 0 :
+#             return fac
+#
+#
+# i = gcd(12, 3)
+# print(i)
+#
+# def lcm(x, y):
+#     return x * y // gcd(x , y)
+#
+#
+# lcm1 = lcm(12, 3)
+# print(lcm1)
+
+# def is_palindrome(num):
+#     t = num
+#     tmp = 0
+#     while t > 0:
+#         tmp = tmp * 10 + t % 10
+#         t //= 10
+#         # print(t)
+#         # print(tmp)
+#     return num == tmp
 
 
+#
+#
+# print(is_palindrome(131))
 
 
+# from math import *
+# #
+# #
+# def is_prime(num):
+#     end = int(sqrt(num))
+#     for i in range(2 , end + 1):
+#         if num % i == 0:
+#             return False
+#     return True
+# # print(is_prime(11))
+#
+# if __name__ == '__main__':
+#     num = int(input('输入数据'))
+#     if is_prime(num) and is_palindrome(num):
+#         print('是回文素数')
+
+# def foo():
+#     b = 'hello'
+#
+#     def foo1():
+#         c = True
+#         print(a)
+#         print(b)
+#         print(c)
+#
+#     foo1()
+#
+#
+# if __name__ == '__main__':
+#     a = 10
+#
+#     foo()
+
+
+# def foo():
+#     global a
+#     a = 200
+#     print(a)
+#
+#
+# if __name__ == '__main__':
+#     a = 100
+#
+#     foo()
+#
+#     print(a)
+
+# def foo():
+#     a = 100
+#
+#     def foo1():
+#         nonlocal a
+#         a = 200
+#         print(a)
+#     foo1()
+#     print(a)
+#
+#
+# if __name__ == '__main__':
+#     foo()
+
+
+# s1 = '\'hello, world!\''
+# s2 = '\n\\hello, world!\\\n'
+# print(s1, s2, end='')
+#
+# s1 = r'\'hello, world!\''
+# s2 = r'\n\\hello, world!\\\n'
+# print(s1, s2, end='')
+
+# if __name__ == '__main__':
+#     s = 'hello , world'
+#
+#     s1 = s + '你好，这个世界'
+#
+#     print('你好' in s1)
+#
+#     print('hello' not in s)
+#
+#     str2 = 'abc123456'
+#
+#     print(str2[2])
+#
+#     print(str2[2:5])
+#
+#     print(str2[2:])
+#
+#     print(str2[0::3])
+#
+#     print(str2[::2])
+#
+#     print(str2[::-1])
+#
+#     print(str2[-3::-2])
+#
+#     print(str2[-3:])
+#
+#     print(s)
+#     print(s1)
+
+
+# if __name__ == '__main__':
+#     str1 = "helloworld"
+#     print(str1.find('or'))
+#     print(str1.find('h'))
+#
+#     print(str1.capitalize())
+#
+#     print(str1.title())
+#
+#     print(str1.upper())
+#
+#     print(str1.isupper())
+#
+#     print(str1.__len__())
+#
+#     print(str1[str1.__len__() - 1])
+#
+#     print(str1[-1:])
+#
+#     print(str1.startswith('he'))
+#
+#     print(str1.__sizeof__())
+#
+#     # print(inspect.getsource(type(str1)))
+#
+#     print(str1.endswith('!'))
+#
+#     print(str1.rjust(50 , '*'))
+#
+#     print(str1.ljust(50 , '#'))
+#
+#     print(str1.center(50))
+#
+#     str2 = str(1345) + 'sfsf'
+#     print(str2)
+#
+#     print(str2.isdecimal())
+#
+#     print(str2.isalnum())
+#     print(str1.isalpha())
+#     print(str1.isdigit())
+#
+#     print(str1.rjust(50 , '*').strip('*'))
+
+
+# def mix_plus_multi(x, y):
+#     return x + y, x * y
+
+
+# if __name__ == '__main__':
+#     # a = 5
+#     # b = 10
+#     #
+#     # print('{0} * {1} = {2}'.format(a , b , a * b))
+#     #
+#     # print(f'{a} * {b} = {a * b}')
+#
+#     list1 = [1, 2, 3, 4, 123]
+#
+#     # l = [1, 23, 4, 4]
+#
+#     print(list1.__sizeof__())
+#     print(list1)
+#     list1 = [1, 2, 3, 4, 123] * 3
+#     # list1 *= list1
+#     print(list1)
+#
+#     print(len(list1))
+#
+#     print(list1[0])
+#     print(list1[-1])
+#
+#     print(list1[0::2])
+#
+#     print(list1[-1::-1])
+#
+#     for i in range(list1.__len__()):
+#         print(list1[i])
+#
+#     print('======================')
+#
+#     for elem in list1:
+#         print(elem)
+#
+#     for index, elem in enumerate(list1):
+#         print(index, elem)
+#
+#     p, m = mix_plus_multi(1, 5)
+#
+#     print(p)
+#     print(m)
+#
+#     list_ = list1[0:5]
+#
+#     list_.append(1)
+#     list_.append(2)
+#
+#     list1 += list_
+#
+#     print(list_)
+#     print(list1)
+#
+#     list_ += [1, 2]
+#
+#     print(list_)
+#
+#     if 1 in list_:
+#         list_.remove(1)
+#     print(list_)
+#
+#     list_.pop(0)
+#     print(list_)
+#
+#     list_.pop(-1)
+#     print(list_)
+#
+#     list_.clear()
+#     print(list_)
+
+# if __name__ == '__main__':
+#     fruits = ['grape', 'apple', 'strawberry', 'waxberry']
+#     fruits += ['pitaya', 'pear', 'mango']
+#
+#     fruits += [1]
+#
+#     print(fruits)
+#     print(type(fruits[0]))
+#     print(type(fruits[-1]))
+#     fruits.pop(-1)
+#
+#     st_ = 'st11'
+#
+#     l = sorted(fruits, key=len , reverse=True)
+#     print(fruits)
+#     print(l)
+#
+#     fruits.sort(key=len, reverse=True)
+#     print(fruits)
+
+# 在python中，与其他语言不同的是，他可以将形参编译到字节码文件中
+# def foo(a=10, b=1, c=2):
+#     return c * a + b
+#
+#
+# if __name__ == '__main__':
+#     i = foo(a=2, c=1, b=6)
+#     print(i)
+
+# if __name__ == '__main__':
+#     t = [x for x in range(1, 100)]
+#     r = range(1, 100)
+#     print(type(r))
+#     print(t)
+#     print(sys.getsizeof(t))
+#     f = (x for x in range(1 , 100))
+#     print(type(f))
+#     print(sys.getsizeof(f))
+#     print(f)
+#     print(sys.getsizeof(f))
+#
+#     f = [x + y for x in '123444' for y in 'adsfsadfa']
+#     print(f)
+
+# for val in f:
+#     print(val)
+
+
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+        yield a
+
+
+def main():
+    for i in fib(20):
+        print(i)
+
+
+if __name__ == '__main__':
+    main()
