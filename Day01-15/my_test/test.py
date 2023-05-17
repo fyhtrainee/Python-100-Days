@@ -8,7 +8,6 @@
 # import inspect
 import sys
 
-
 # value = float(input('请输入长度：'))
 # unit = input('请输入单位：')
 #
@@ -531,17 +530,41 @@ import sys
 #     print(val)
 
 
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        a, b = b, a + b
-        yield a
+# def fib(n):
+#     a, b = 0, 1
+#     for _ in range(n):
+#         a, b = b, a + b
+#         yield a
+#
+#
+# def main():
+#     for i in fib(20):
+#         print(i)
+#
+#
+# if __name__ == '__main__':
+#     main()
 
+t = ('测试对象', 12, 13.2, True)
 
-def main():
-    for i in fib(20):
-        print(i)
+for i in t:
+    print(i)
 
+print(t)
+print(t[0], t[1])
 
-if __name__ == '__main__':
-    main()
+t = ('王大锤', 20, True, '云南昆明')
+
+l = list(t)
+print(l)
+for i in l:
+    print(i)
+print(l[0])
+
+_list = [1, True , '分手']
+
+_t = tuple(_list)
+print(_t)
+
+print(sys.getsizeof(_list))
+print(sys.getsizeof(_t))
